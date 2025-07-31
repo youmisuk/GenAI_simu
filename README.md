@@ -3,7 +3,7 @@
 ## 0 Table of Contents
 
 1. [Overview](#1-overview)
-2. [Python files](#2-running-the-code)  
+2. [Running the Code](#2-running-the-code)  
 
 
 ## 1 Overview  
