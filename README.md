@@ -16,4 +16,13 @@ Monte Carlo simulation studies are the de facto standard for assessing both clas
 
 For more details of our proposed methods, see [our paper](https://osf.io/preprints/psyarxiv/7rd86_v1). 
 
-## 2 Running the Code
+## 2 Running the Code  
+### 2.1 Requirments
+```{python}
+python==3.12.3
+SDV==1.21.0
+pytorch==2.3.1
+```
+
+
+
