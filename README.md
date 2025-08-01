@@ -24,5 +24,12 @@ SDV==1.21.0
 pytorch==2.3.1
 ```
 
+### 2.2 Reproduce the results
+1. Create the conda virtual environment first with the required versions of python and libraries. Run this project in this virtual env.
+2. Run the jupyter notebook "02_code\\01_CTGAN_optimal.ipynb" to reproduce the optimal CTGAN.
+3. Run the jupyter notebook "02_code\\02_CPAR.ipynb" to reproduce the CPAR.
+4. 
+
+
 
 
