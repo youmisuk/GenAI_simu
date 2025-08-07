@@ -35,7 +35,7 @@ pytorch==2.3.1
 1. Create the conda virtual environment first with the required versions of python and libraries. Run this project in this virtual env.
 2. Run the jupyter notebook "02_code\\01_CTGAN_optimal.ipynb" to reproduce the optimal CTGAN.
 3. Run the jupyter notebook "02_code\\02_CPAR.ipynb" to reproduce the CPAR.
-4. 
+4. Run the R file "02_code\\03_...r" to reproduce the results for using synthetic data for Tang's simulation, i.e., Figure 5.  
 
 
 
