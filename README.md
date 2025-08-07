@@ -19,9 +19,8 @@ For more details of our proposed methods, see [our paper](https://osf.io/preprin
 ## 2 Running the Code  
 #### 2.1.1 Requirments for computational resources 
   
-A GPU is necessary for training GenAI models. As for synthetic tabular data task, a gaming video card is enough or one can use free GPU from Google Colab to train GenAI.  
-  
-We ran all tasks on our local machine with an Intel CPU i7-14700F and an NVIDIA GeForce RTX 4070Super GPU, where costs around 10 mins for training the optimal CTGAN model and 25 mins for training CPAR model.
+A GPU is recommended for training generative AI models. For the task of synthetic tabular data, a consumer-grade gaming GPU with CUDA cores is sufficient. Alternatively, free GPU resources, like those provided by Google Colab, can be used for training GenAI models.
+We conducted all experiments on a local machine equipped with an Intel Core i7-14700F CPU and an NVIDIA GeForce RTX 4070 Super GPU. Training an optimized CTGAN model took approximately 10 minutes, while training a CPAR model required about 25 minutes.
 
 #### 2.1.2 Key libraries  
 
