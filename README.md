@@ -17,7 +17,8 @@ Monte Carlo simulation studies are the de facto standard for assessing both clas
 For more details of our proposed methods, see [our paper](https://osf.io/preprints/psyarxiv/7rd86_v2). 
 
 ## 2 Running the Code  
-#### 2.1.1 Requirments for computational resources 
+### 2.1 Requirements
+#### 2.1.1 Requirements for computational resources 
   
 A GPU is recommended for training generative AI models. For the task of synthetic tabular data, a consumer-grade gaming GPU with CUDA cores is sufficient. Alternatively, free GPU resources, like those provided by Google Colab, can be used for training GenAI models.  
 We conducted all experiments on a local machine equipped with an Intel Core i7-14700F CPU and an NVIDIA GeForce RTX 4070 Super GPU. Training an optimized CTGAN model took approximately 10 minutes, while training a CPAR model required about 25 minutes.
