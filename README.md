@@ -19,7 +19,7 @@ For more details of our proposed methods, see [our paper](https://osf.io/preprin
 ## 2 Running the Code  
 ### 2.1 Requirements  
 #### 2.1.1 Requirements for dataset formats  
-The CTGAN model is trained on a single-table dataset as shown in Table 1, where the ActionSequence column is treated as categorical. In contrast, CPAR uses a sequential-table dataset as shown in Table 2, where each action is a separate row observation, and each test-taker contributes multiple rows (denoted as the Action column). Figure 1 from our paper shows the difference between these two tables.  
+The CTGAN model is trained on a single-table dataset as shown in Table 1, where the ActionSequence column is treated as categorical. In contrast, CPAR uses a sequential-table dataset as shown in Table 2, where each action is a separate row observation, and each test-taker contributes multiple rows (denoted as the Action column).
 
 **Table 1: Single table dataset for CTGAN**
 | ID       | Gender | Age | Score | ActionSequence         | ResponseTime |
