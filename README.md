@@ -47,6 +47,18 @@ The CTGAN model is trained on a single-table dataset as shown in Table 1, where 
 A GPU is recommended for training generative AI models. For the task of synthetic tabular data, a consumer-grade gaming GPU with CUDA cores is sufficient. Alternatively, free GPU resources, like those provided by Google Colab, can be used for training GenAI models.  
 We conducted all experiments on a local machine equipped with an Intel Core i7-14700F CPU and an NVIDIA GeForce RTX 4070 Super GPU. Training an optimized CTGAN model took approximately 10 minutes, while training a CPAR model required about 25 minutes.  
 
+The following Table shows the key differences  
+
+| Component               | CTGAN                  | CPAR                  |
+|-------------------------|------------------------|-----------------------|
+| Input data type         | single-table           | sequential-table      |
+| Auxiliary variables     | action count           | action count, sequence index |
+| Data encoder: ActionSequence | uniform encoder     | -                     |
+| Metadata: ID            | ID                     | ID, sequence index    |
+| Tunable parameters      | number of hidden layers<br>number of neurons per layer<br>number of epochs, etc | number of candidate sequences<br>number of epochs, etc |
+| Training time           | 10 minutes             | 25 minutes            |
+| Sample generation time  | 1 second               | 13 minutes            |
+
 
 
 
