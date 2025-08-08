@@ -39,7 +39,7 @@ The CTGAN model is trained on a single-table dataset as shown in Table 1, where 
 | 1001041  | Male   | 16  | 1     | END       | 75.12        |
 | 1001042  | Female | 40  | 1     | START     | 105.38       |
 | 1001042  | Female | 40  | 1     | TAB       | 105.38       |
-| 1001042  | Female | 40  | 1     |           | 105.38       |
+| 1001042  | Female | 40  | 1     | TAB       | 105.38       |
 | ...      | ...    | ... | ...   | ...       | ...          |  
   
 #### 2.1.2 Requirements for computational resources 
