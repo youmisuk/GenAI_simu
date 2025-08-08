@@ -52,10 +52,24 @@ We conducted all experiments on a local machine equipped with an Intel Core i7-1
 
 #### 2.1.3 Key libraries  
 
+To run the Python files, please install the following Python version and libraries.  
+
 ```{python}
 python==3.12.3
 SDV==1.21.0
 pytorch==2.3.1
+```
+To run the R files, please install the following R packages.
+
+```{R}
+install.packages(c(
+  "doParallel",
+  "foreach",
+  "ProcData",
+  "ggplot2",
+  "patchwork"
+))
+
 ```
 
 ### 2.2 Reproduce the results
