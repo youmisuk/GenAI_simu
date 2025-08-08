@@ -1,0 +1,62 @@
+# these should load the gdat and gdat_g from 03 file
+load("../03_outputs/sim_results.RData")
+
+colnames(gdat) <- c("SampleSize", "AverageAccuracy", "WorstAccuracy", "GroupAccuracy")
+gdat$SampleSize <- factor(gdat$SampleSize, levels=c("n=200", "n=500", "n=1000"))
+head(gdat)
+
+# get the average AverageAccuracy, WorstAccuracy, and GroupAccuracy by SampleSize using dplyr
+library(dplyr)
+Means <- gdat %>% group_by(SampleSize) %>% summarise(AverageAccuracy=mean(AverageAccuracy), WorstAccuracy=mean(WorstAccuracy), GroupAccuracy=mean(GroupAccuracy))
+Means
+
+Medians <- gdat %>% group_by(SampleSize) %>% summarise(AverageAccuracy=median(AverageAccuracy), WorstAccuracy=median(WorstAccuracy), GroupAccuracy=median(GroupAccuracy))
+Medians
+
+
+colnames(gdat_g) <- c("SampleSize", "CountryAccuracy", "GenderAccuracy", "ScoreAccuracy", "AgeAccuracy", "ResponseTimeCor", "LiteracyScoreCor", "NumeracyScoreCor")
+gdat_g$SampleSize <- factor(gdat_g$SampleSize, levels=c("n=200", "n=500", "n=1000"))
+
+library(ggplot2)
+library(tidyr)
+
+gdat_g_l <- gather(gdat_g, key="Variable", value="Value", -1)
+
+
+# ------------------------------------------------------------------
+#
+#   Make the Academic figure
+#
+# ------------------------------------------------------------------
+head(gdat)
+
+dat_ms <- data.frame(gdat[, 1:3], GroupAccuracy=gdat_g_l[gdat_g_l$Variable%in% c("GenderAccuracy"), "Value"])
+
+
+library(tidyr)
+gdat_ms_l <- gather(dat_ms, key="Variable", value="Value", -1)
+table(gdat_ms_l$SampleSize)
+
+head(gdat_ms_l)
+
+gdat_ms_l$Variable <- factor(gdat_ms_l$Variable, levels=c("AverageAccuracy", "WorstAccuracy", "GroupAccuracy"), 
+                             labels=c("N-Gram Average Accuracy", "N-Gram Worst Accuracy", "Group Accuracy"))
+gdat_ms_l$SampleSize <- factor(gdat_ms_l$SampleSize, levels=c("n=200", "n=500", "n=1000"), 
+                               labels=c("200", "500", "1000"))
+
+means_final <- gdat_ms_l %>% group_by(Variable, SampleSize) %>% summarise(Value=mean(Value)); means_final
+
+medians_final <- gdat_ms_l %>% group_by(Variable, SampleSize) %>% summarise(Value=median(Value)); medians_final
+
+
+library(ggplot2)
+gplot <- ggplot(gdat_ms_l[!gdat_ms_l$SampleSize %in% "3254",], aes(x=SampleSize, color=SampleSize, y=Value)) + 
+  geom_boxplot() + 
+  facet_wrap(. ~ Variable, scales="free_y") + 
+  theme_bw(base_size = 20, base_family = "DejaVu Sans") + 
+  labs(x="Sample Size", y="Accuracy") + 
+  theme(legend.position = "none")
+
+jpeg("..\\03_outputs\\Figure_5.jpeg", width = 12, height = 5, units = 'in', res = 600)
+gplot
+dev.off()

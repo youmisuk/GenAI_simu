@@ -170,13 +170,19 @@ for (d in 1:3) {  # Loop over the first three datasets
 ### Shut down the cluster ###
 stopCluster(cl)
 
+# (Optional) View the time taken
+time_elapsed <- Sys.time() - time_0
+print(time_elapsed)
+
 ### Combine results for plotting or further analysis ###
 gdat <- rbind(data.frame(SampleSize = "n=200", result[[1]]),
               data.frame(SampleSize = "n=500", result[[2]]),
               data.frame(SampleSize = "n=1000", result[[3]]))
 
-# (Optional) View the time taken
-time_elapsed <- Sys.time() - time_0
-print(time_elapsed)
+gdat_g <- rbind(data.frame(SampleSize = "n=200", result_g[[1]]),
+                data.frame(SampleSize = "n=500", result_g[[2]]),
+                data.frame(SampleSize = "n=1000", result_g[[3]]))
 
-table(gdat[, 1])
+# save gdat and gdat_g for analysis
+save(gdat, gdat_g, file = "../03_outputs/sim_results.RData")
+
