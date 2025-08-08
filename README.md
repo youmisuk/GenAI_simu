@@ -2,13 +2,13 @@
 
 ## 0 Table of Contents  
 
-1. [1 Overview](#1-overview)
-2. [2 Running the Code](#2-running-the-code)
-3. [2.1 Requirements](#21-requirements)
-   1. [2.1.1 Requirements for dataset formats](#211-requirements-for-dataset-formats)
-   2. [2.1.2 Requirements for computational resources](#212-requirements-for-computational-resources)
-   3. [2.1.3 Key libraries](#213-key-libraries)
-4. [2.2 Reproduce the results](#22-reproduce-the-results)
+[1 Overview](#1-overview)
+[2 Running the Code](#2-running-the-code)
+[2.1 Requirements](#21-requirements)  
+[2.1.1 Requirements for dataset formats](#211-requirements-for-dataset-formats)
+[2.1.2 Requirements for computational resources](#212-requirements-for-computational-resources)
+[2.1.3 Key libraries](#213-key-libraries)
+[2.2 Reproduce the results](#22-reproduce-the-results)
 
 ## 1 Overview  
 
