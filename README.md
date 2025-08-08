@@ -35,6 +35,19 @@ We conducted all experiments on a local machine equipped with an Intel Core i7-1
 | 1001045  | Female | 35  | 0     | START_NEXT_INQUIRY,END | 114.77       |
 | ...      | ...    | ... | ...   | ...                    | ...          |
 
+  
+**Table 2: Sequential table dataset for CPAR**  
+| ID       | Gender | Age | Score | Action    | ResponseTime |
+|----------|--------|-----|-------|-----------|--------------|
+| 1001041  | Male   | 16  | 1     | START     | 75.12        |
+| 1001041  | Male   | 16  | 1     | COMBOBOX  | 75.12        |
+| 1001041  | Male   | 16  | 1     | ...       | 75.12        |
+| 1001041  | Male   | 16  | 1     | END       | 75.12        |
+| 1001042  | Female | 40  | 1     | START     | 105.38       |
+| 1001042  | Female | 40  | 1     | TAB       | 105.38       |
+| 1001042  | Female | 40  | 1     |           | 105.38       |
+| ...      | ...    | ... | ...   | ...       | ...          |  
+
 
 
 #### 2.1.3 Key libraries  
